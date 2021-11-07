@@ -1,0 +1,957 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans Display', sans-serif; 
+    font-size: 16px;
+    box-sizing: border-box;
+  
+}
+
+/* Buttons */
+.primaryButton {
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    padding: 15px;
+    font-size: 1rem;
+    margin-top: 20px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+.primaryButton:hover {
+    background-color: rgb(155, 125, 51);
+
+
+}
+.secondaryButton {
+    background-color: transparent;
+    border: 1px solid black;
+    padding: 15px;
+    font-size: 1rem;
+    margin-top: 20px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    width:auto;
+  
+}
+.secondaryButton:hover {
+    background-color: black;
+    color: white;
+}
+
+/* Navbar/Mobile Navbar */
+
+#navBar{
+display: flex;
+flex-direction: row;
+justify-content: flex-end;
+position: fixed;
+z-index: 1;
+width: 100%;
+background-color: rgba(0, 0, 0, 0.438);
+
+}
+#navBar > a {
+    padding: 20px;
+    font-size: 1.5rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+}
+#navBar > a:active {
+    color: goldenrod;
+}
+#mobileNavBar {
+    display:none ;   
+}
+
+/* Header */
+
+.headerDiv {
+    background-image: url('assets/headerBackground.jpeg');
+    height: 600px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 100px 0;
+    background-attachment: fixed;
+    background-position: center center;
+    display: flex;
+    justify-content: center;
+    color: white;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.headerDiv > p, #midContentImg > p{
+    font-weight: 300;
+    font-size: 2.5rem;
+}
+.headerDiv > h1 {
+font-size: 3rem;
+}
+
+/* About us section */
+
+#aboutUsContainer {
+    width: 100%;
+    display: grid;
+   grid-template-columns: 1fr 1fr;
+    align-items: center;
+    margin-top: 7%;
+    color: rgb(82, 80, 80);
+}
+
+.aboutUsimg {
+    position: relative;
+    width: 50%;
+    margin: 0 auto;
+  
+}
+.aboutUsImgFirst, .aboutUsImgSecond{
+    overflow: hidden;
+}
+
+.aboutUsImgFirst > img{
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 5px;
+
+}
+.aboutUsImgSecond > img{
+    width: 100%;
+    position: absolute;
+    top: 218px;
+    left: 142px;
+    border-radius: 5px;
+
+}
+.aboutUsDiv {
+    width: 50%;
+    text-align: center;
+
+   
+}
+
+.aboutUsDiv > h2 {
+    font-size: 2.5rem;
+    padding: 10px;
+}
+.aboutUsDiv > p {
+    line-height: 35px;
+    margin-bottom: 30px;
+}
+/* Mid content img */
+#midContentImg {
+    width: 100%;
+    height: 300px;
+    background-image: url('assets/midContentImg.jpeg');
+    background-size: cover;
+    margin-top: 20%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    color: white;
+    font-style: italic;
+    font-weight: 300;
+    margin-bottom: 5%;
+}
+
+/* Chef section */
+
+#chefsContainer {
+    width: 100%;
+    display: grid;
+    height: 400px;
+    color: rgb(82, 80, 80);
+    margin-bottom: 15%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: center;
+}
+#chefsContainer > h1, .reviewFormContainer > h4 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+.chefBox {
+   margin: 10px;
+    text-align: center;
+ 
+
+}
+.chefBox > h4, .slideCol > h2  {
+    font-size: 1.5rem;
+    padding: 5px;
+   
+}
+.chefImg {
+    height: 350px;
+}
+.chefImg > img {
+    width: 90%;
+ height: 100%;
+    border-radius: 5px
+    ;
+
+}
+
+/* Menu section */
+
+#menuContainer {
+ margin-bottom: 5%;
+ margin-top: 5%;
+    width: 100%;
+    color: rgb(82, 80, 80);
+}
+
+.menuHeader {
+ text-align: center;
+    margin: 4%;
+}
+.menuHeader > h4 {
+    font-size: 2rem;
+    padding: 10px;
+}
+
+.menuDivs, .menuDivsAll {
+    display: grid;
+    width: 80%;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    margin: 0 auto;
+}
+.menuImg {
+    overflow: hidden;
+}
+.menuImg > img {
+    width: 230px;
+    height: 250px;
+    border-radius: 5px;
+ 
+}
+.menuImg > img:hover, .aboutUsImgFirst > img:hover, .aboutUsImgSecond > img:hover{
+    transform: scale(1.1);
+    transition: 5s;
+}
+
+.menuOptions {
+    text-align: center;
+    margin-bottom: 4%;
+}
+.menuOptions > label {
+    font-size: 1.5rem;
+}
+
+#fetchval {
+    width: 120px;
+    height: 40px;
+    padding: 5px;
+    font-size: 1rem;
+    text-align: center;
+    border-color: goldenrod;
+}
+
+.menuDescription{
+    background-color: rgba(0, 0, 0, 0.63);;
+    height: auto;
+    width: 100%;
+    color: white;
+    font-size: 1rem;
+    padding: 10px;
+
+    font-weight: lighter;
+   margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+/* Footer */
+
+  
+  .footerDiv{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+    justify-content: space-evenly;
+    background-color: white;
+    border-top: 1px solid rgb(82, 80, 80);
+    color: rgb(82, 80, 80);
+    padding-top: 15px;
+
+  }
+  .footerBox {
+  text-align: center;
+  }
+  .footerBox > p {
+    padding: 10px;
+  }
+  .footerBox > h4 {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: lighter;
+    margin-top: 10px;
+  }
+  .footerBox > img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .footerIcons {
+text-align: center;
+margin-top: 20px;
+padding:8px;
+
+  }
+ /* Reservation section */
+
+  .reservationHeader {
+      text-align: center;
+      background-image: url('assets/reviewHeaderImg.jpeg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding: 100px 0;
+      background-position: center center;
+      height: auto;
+      color: white;
+      font-size: 2rem;
+    }
+    .reservationHeader > h1 {
+        font-size: 3rem;
+    }
+
+  .formcontainer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      flex-direction: column;
+      margin-top: 30px;
+  }
+
+  .reservationForm{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 5%;
+     
+     
+  }
+  .reservationDiv  > input,  .reservationDiv > select  {
+      height: 50px;
+      padding: 10px;
+   
+      margin: 10px;
+     border: 1px solid gray;
+     width: 100%;
+     background-color: white;
+
+  
+  }
+  .reservationDiv  > input:focus,  .reservationDiv > select:focus {
+      outline: 1px solid goldenrod;
+      
+  }
+
+  .reservationDiv > label {
+      font-size: 1.5rem;
+      padding: 5px;
+      color: gray;
+  }
+
+  .reservationDiv {
+      display: flex;
+      flex-direction: column;
+      width: 35%;
+      margin: 10px;
+  }
+
+  /* Reservation confirmation section */
+
+.confirmationContainer {
+    width: 100%; 
+}
+.confirmationHeader {
+    background-image: url('./assets/reservationConfirmation.jpeg');
+    color: white;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    width: 100%;
+    flex-direction: column;
+
+}
+.confirmationHeader > p, .confirmationHeader > h4 {
+    font-weight: 300;
+    font-size:2.5rem;
+}
+
+.confirmationDiv {
+    width: 100%;
+    margin-top: 6%;
+    margin-bottom: 10%;
+    font-size: 2rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+.confirmationBox > p {
+    padding: 15px;
+    font-size: 1.5rem;
+  
+}
+.confirmationBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.confirmationBox > img {
+    height: 75px;
+}
+
+
+/* Reviews section */
+.reviewsBtnNext, .reviewsBtnPrev {
+    position: absolute;
+    top:50%;
+    width: 3rem;
+    height: 3rem;
+    background-color: #FFF;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    cursor: pointer; 
+    z-index: 1001; 
+    border: 1px solid black;
+}
+
+.reviewsBtnNext{
+    right: 50px;
+}
+
+.reviewsBtnPrev {
+    left: 50px;
+}
+
+.reviewsBtnNext::after, .reviewsBtnPrev::after {
+    content: " ";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: 50%;
+    left: 54%;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    transform: translate(-50%, -50%) rotate(135deg);
+}
+.reviewsBtnNext::after{
+    left: 47%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+.slideCol{
+    opacity: 0;
+  position: absolute;
+  top:0;
+  width: 50%;
+  margin: auto;
+  padding: 1rem 4rem;
+  z-index: 100;
+  
+  line-height: 30px;
+}
+
+.slideCol.initial, .slideCol.active {
+    opacity: 1;
+    position: relative;
+    z-index: 900;
+}
+.slideCol.prev, .slideCol.next {
+    z-index: 800;
+}
+.slideCol.prev {
+    transform: translate(-100%);
+}
+.slideCol.next {
+    transform: translate(100%);
+}
+
+#reviewsContainer{
+   
+    overflow: hidden;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+ margin: 40px auto;
+ 
+   
+}
+.fas  {
+    color: goldenrod;
+}
+
+.reviews{
+    transform-style: preserve-3d;
+    font-size: 2rem;
+    color: rgb(82, 80, 80);;
+}
+.reviews > h2 {
+    font-size: 2rem;
+    padding: 10px;
+    margin-bottom: 50px;
+    
+}
+.checked {
+    color: goldenrod;
+}
+
+.reviewFormContainer {
+margin: 60px 0;
+width: 100%;
+text-align: center;
+color: rgb(82, 80, 80);;
+   
+}
+
+#reviewForm {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin: 30px auto;
+  
+}
+#reviewForm > label, #reviewForm > p {
+    width: 100%;
+    text-align: start;
+    padding: 10px;
+}
+
+#review { 
+  border: 1px solid black;
+  border-radius: 4px;
+
+  resize: none;
+
+  outline: none;
+  padding: 10px;
+  margin: 5px;
+  width: 100%;
+  
+}
+#reviewName {
+    border: 1px solid black;
+    border-radius: 4px;
+
+    height: 50px;
+    outline: none;
+    width: 100%;
+    padding: 10px;
+    margin: 5px;
+}
+
+#reviewSubmit {
+    width: 130px;
+    align-self: center;
+}
+.reviewFormWrapper {
+   display: none;
+}
+.rate {
+    width: 41%;
+}
+.rate:not(:checked) > input {
+   visibility: hidden;
+}
+.rate:not(:checked) > label:before {
+    content: '★ ';
+}
+.rate > input:checked ~ label {
+    color: #ffc700;    
+}
+.rate:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:30px;
+    color:#ccc;
+}
+
+/* Gallery */
+
+#galleryHeader{
+    width: 100%;
+    height: 300px;
+    margin: 0 auto;
+    padding-top: 150px;
+}
+#galleryHeader > h2 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: rgb(82, 80, 80);;
+}
+#gallery{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 50px;
+   
+}
+
+
+#galleryWrap {
+    display: grid;
+    grid-template-columns: repeat(4, 300px);
+    grid-template-rows: repeat(3,300px);
+    width: 100%;
+    justify-content: center;
+    gap: 20px;
+}
+.galleryBox {
+    position: relative;
+}
+.galleryBox.One, .galleryBox.Three {
+    -webkit-animation-name: slideInLeft;
+    animation-name: slideInLeft;
+    -webkit-animation-duration: 3s;
+    animation-duration: 3s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+.galleryBox.Two, .galleryBox.Four,.galleryBox.Five,.galleryBoxSix {
+    -webkit-animation-name: fadeInRight;
+    animation-name: fadeInRight;
+    -webkit-animation-duration: 3s;
+    animation-duration: 3s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.galleryBox > img {
+    width: 100%;
+    height: 100%;
+   
+}
+
+.galleryBox.One {
+    grid-column: 1 / 3;
+    
+}
+.galleryBox.Two {
+    grid-column: 3 / 5;
+  
+    
+} 
+.galleryBox.Three {
+    grid-column: 1 / 3;
+    grid-row: 2 / 4;
+  
+}
+.galleryBox.Four {
+    grid-column: 3 / 5;
+
+}
+
+ .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.9);
+ }
+ .modalImage {
+    margin: auto;
+    display: block;
+    width: 100%;
+    height: 95%;
+    max-width: 700px;
+ }
+ .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+ }
+ .close:hover,
+ .close:focus {
+    color: rgb(255, 0, 0);
+    cursor: pointer;
+ }
+
+
+ @keyframes slideInLeft {
+  0% {
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+  visibility: visible;
+  }
+  100% {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  }
+  }
+
+  @keyframes fadeInRight {
+    0% {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+    }
+    100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+    }
+    }
+
+  @media screen and (max-width: 980px) {
+    .aboutUsImgSecond {
+        display: none;
+    }
+
+    .aboutUsImgFirst > img {
+        height: auto;
+    }
+
+
+#galleryWrap {
+    grid-template-columns: repeat(4, 105px);
+    grid-template-rows: repeat(4,150px);
+ 
+}
+.galleryBox.Four {
+    grid-column: 3/5;
+    grid-row: 2 / 4;
+  
+}
+
+
+.galleryBox.Five{
+    grid-column: 1 / 3;
+    
+}
+.galleryBox.Six {
+    grid-column: 3 / 5;
+  
+    
+} 
+
+.slideCol {
+    width: 100%;
+}
+
+
+  }
+
+
+@media screen and (max-width: 650px) {
+    
+    /* Navbar */
+    #navBar {
+        display: none;
+    }
+
+    #mobileNavBar {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        position: fixed;
+        z-index: 1;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.438);
+        
+       
+    }
+    .mobileNavBarBtn {
+        position: relative;
+         z-index: 1;
+        padding: 10px 50px;
+        text-align: center;      
+    }
+
+    .navBarDropdown {
+   display: none;
+   font-size: 1.5rem;
+   position: absolute;
+   right: 5px;
+   background-color:rgba(0, 0, 0, 0.438) ;
+   height: 150px;
+   padding: 5px;
+   margin-top: 10px;
+   border-bottom-left-radius: 5px;
+   border-bottom-right-radius: 5px;
+   
+    }
+
+    .mobileNavBarBtn:hover .navBarDropdown {
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    }
+  
+    .navBarDropdown > a {
+        z-index: 1;
+        text-decoration: none;
+        color: white;
+        text-transform: uppercase;
+        font-size: 1rem;
+        padding: 5px;  
+    }
+    .navBarDropdown > a:hover {
+        color: goldenrod;
+    }
+
+    .fa-bars {
+  color: white;
+  background-color:  rgba(0, 0, 0, 0);
+    }
+   .dropdownBtn{
+        background-color:  rgba(0, 0, 0, 0);
+        border: none;
+    }
+    
+    /* About us section */
+
+    #aboutUsContainer {
+        display: flex;
+    flex-direction: column;
+    }
+    .aboutUsimg {
+        display: flex;
+        flex-direction: row;
+        transform: none;
+    }
+   
+    .aboutUsDiv > h2{
+        font-size: 2rem;
+    }
+    /* Chef section */
+
+    #chefsContainer {
+        display: block;
+      height: auto;
+      text-align: center;
+
+   
+    }
+
+    .chefBox {
+        display: inline-block;
+        width: 19%;
+        margin-left: 1%;
+    }
+    .chefImg{
+        height: auto;
+        width: 100%;  
+    }
+   
+    #midContentImg {
+        text-align: center;
+    }
+    #midContentImg > p  {
+        font-size: 2rem;
+    }
+    
+    /* Menu section */
+
+    .menuDescription{
+        font-size: 15px;
+        margin-bottom: 50px;
+        width: 100%;
+    }
+    .menuDivs, .menuDivsAll {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .menuImg {
+        width: 70%;
+    }
+   
+    .menuImg > img {
+        width: 100%;
+        height: 200px;
+    }
+
+/* Footer section */
+    .footerDiv {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+    }
+    .footerBox {
+        width: 100%;
+     padding-top: 50px;
+    }   
+}
+
+@media screen and (max-width: 480px) {
+    
+    #chefsContainer > h1 {
+        font-size: 1.5rem;
+      }
+  
+      .chefBox > h4 {
+          font-size: 1rem;
+      }
+    .chefBox {
+        display: block;
+        margin: 5px auto;
+        width: 60%;
+    }
+    .menuDescription {
+        height: 23%;
+    }
+
+    #reviewForm {
+        width: 60%;
+    }
+
+    .reservationDiv {
+        width: 50%;
+    }
+	.rate {
+        width: 100%;
+    }
+    .footerBox > h4 {
+        font-size: 1rem;
+    }
+    .footerBox > p {
+        font-size: 0.7rem;
+    }
+
+   
+}
+@media screen and (max-width: 320px)  {
+    #galleryWrap {
+        grid-template-columns: repeat(4, 90px);
+        grid-template-rows: repeat(4,100px);
+        gap: 5px;
+    }
+    .confirmationDiv {
+        height: 37%;
+  
+    }
+}
